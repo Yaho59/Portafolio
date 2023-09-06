@@ -36,14 +36,14 @@ header{
 .header-information a{
     text-decoration: none;
     color: var(--title-color);
-    font-size: .7rem;
+    font-size: 1.2rem;
     display: none;
 }
 
 .header-logo{
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    font-size: .8rem;  
+    font-size: 1.2rem;  
     text-shadow: 1px 1px 20px #4C5059;
 }
 
@@ -98,7 +98,13 @@ main {
 }
 
 .container-information h1{
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+.container-information p{
     font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 .button{
