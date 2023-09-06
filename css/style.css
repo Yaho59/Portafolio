@@ -1,6 +1,6 @@
 :root{
     --title-color:#F2F2F2;
-    --text-color: #4C5059;
+    --text-color: #80848C;
     --color-primary: #1A1E26;
     --color-secondary: #090A0D;
 }
@@ -11,10 +11,9 @@
     box-sizing: border-box;
 }
 
-body{
+html{
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
-    background-color: var(--color-secondary);
 }
 
 header{
@@ -49,6 +48,12 @@ header{
 }
 
 /* Aca estan los estilos del hero */
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-secondary);
+}
+
 .hero{
     position: relative;
     height: auto;
@@ -96,7 +101,7 @@ header{
     font-size: 1.2rem;
 }
 
-.enlace-cv{
+.button{
     display: inline-block;
     width: 100px;
     height: 30px;
@@ -108,4 +113,79 @@ header{
     padding: 10px 0;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+/* Aca estan los estilos de proyect */
+.pageweb-proyects{
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.pageweb-proyects__title{
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+    color: var(--title-color);
+    padding-bottom: 20px;
+}
+
+.content-proyects{
+    width: 90%;
+    min-width: 288px;
+    max-width: 288px;
+    min-height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+}
+.content-proyects__img{
+    width: 100%;
+    height: 150px;
+}
+
+.content-proyects__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-proyects__information{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 10px 0;
+}
+
+.content-information__title{
+    color: var(--title-color);
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    padding-bottom: 5px;
+}
+
+.content-information__description{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.tecnologia-use{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: var(--title-color);
+    padding-top: 5px;
+}
+
+.button-proyects{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    font-size: 1.2rem;
 }
