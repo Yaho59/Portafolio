@@ -1,0 +1,114 @@
+:root{
+    --title-color:#F2F2F2;
+    --text-color: #4C5059;
+    --color-primary: #1A1E26;
+    --color-secondary: #090A0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    /* background-color: var(--color-secondary); */
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    width: 100%;
+    height: 4.0rem;
+    padding: 0 10px;
+    background-color: var(--color-primary);
+    
+}
+
+.header-information{
+    display: flex;
+    gap: 10px;
+    color: var(--title-color);
+}
+
+.header-information a{
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: .7rem;
+}
+
+.header-logo{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: .8rem;  
+}
+
+/* Aca estan los estilos del hero */
+.hero{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-container{
+    /* position: absolute; */
+    width: 100%;
+    /* background-image: linear-gradient(100deg, #000000, #00000020), url('../assets/img/code.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+} 
+
+.image-container img{
+    display: inline-block;
+    width: 100%;
+}
+
+.hero-information-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 10px;
+    text-align: center;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    color: var(--title-color);
+}
+
+.image-information-container{
+    width: 80px;
+    height: 80px;
+}
+
+.image-information-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 2px solid var(--title-color);
+    object-fit: cover;
+}
+
+.container-information h1{
+    font-size: 1.2rem;
+}
+
+.enlace-cv{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-secondary);
+    background-color: var(--title-color);
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
