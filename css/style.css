@@ -285,3 +285,24 @@ main {
 .btn{
     font-size: 1.2rem;
 }
+/* Aca estan los estilos de about-me */
+.content-about-me{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.content-about-me h2{
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+    color: var(--title-color);
+    padding-bottom: 20px;
+}
+
+.content-about-me p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
