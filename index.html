@@ -15,14 +15,42 @@
 
 <body>
     <header>
-        <div class="header-information">
-            <span class="header-logo">YahoDev</span>
-            <a href="">Proyectos</a>
-            <a href="">Acerca de mí</a>
-        </div>
-        <div class="social-media">
-            <a href="#">j</a>
-        </div>
+        <nav class="nav">
+            <div class="nav__container">
+                <span class="header-logo">YahoDev</span>
+
+                <ul class="dropdown" id="menu">
+
+                    <li class="dropdown__list">
+                        <a href="#home" class="dropdown__link">
+                            <span class="dropdown__span">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="dropdown__list">
+                        <a href="#projects" class="dropdown__link">
+                            <span class="dropdown__span">Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="dropdown__list">
+                        <a href="#projects" class="dropdown__link">
+                            <span class="dropdown__span">Acerca de mi</span>
+                        </a>
+                    </li>
+                    <li class="dropdown__list">
+                        <a href="#projects" class="dropdown__link">
+                            <span class="dropdown__span">Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+                    <a href="#menu" class="nav__menu">
+                        <img src="./assets/icons/menu.svg" class="nav__icon">
+                    </a>
+        
+                    <a href="#" class="nav__menu nav__menu--second">
+                        <img src="./assets/icons/close.svg" class="nav__icon ">
+                    </a>
+            </div>
+        </nav>
     </header>
 
     <main>
