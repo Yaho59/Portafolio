@@ -136,7 +136,29 @@
                 </article>
             </section>
         </section>
-        <section id="contact"></section>
+        <section id="contact">
+            <article class="container-contact">
+                <h2 class="container-contact__title">Contacto</h2>
+                <form action="https://formsubmit.co/yaoskatelleria59@gmail.com" method="POST" class="container-contact__form">
+                    <label for="name" class="label">Nombre</label>
+                    <input type="text" placeholder="Carlos" name="name" id="name"  autocomplete="name" class="input input-nombre" required>
+    
+                    <label for="phone" class="label">Teléfono</label>
+                    <input type="number" placeholder="ej.(+505)56787978" name="phone" id="phone" autocomplete="tel" class="input input-telefono" required>
+                    
+                    <label for="email" class="label">Email</label>
+                    <input type="text" placeholder="carlos@example.com" name="email" id="email" autocomplete="email" class="input input-email" required>
+
+                    <label for="message" class="label">Asunto</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="textarea" required></textarea>
+
+                    <input type="submit" value="Enviar" class="login-button button">
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </article>
+        </section>
     </main>
     <footer></footer>
 </body>

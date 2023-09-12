@@ -199,6 +199,7 @@ main {
 
 .button{
     display: inline-block;
+    place-items: center;
     width: 100px;
     height: 30px;
     text-align: center;
@@ -315,7 +316,7 @@ main {
 .container-skills{
     width: 100%;
     min-width: 320px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -354,3 +355,56 @@ main {
     color: var(--title-color);
 }
 
+/* Aca vienen los estilos de la seccion de contacto */
+.container-contact{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    /* background-color: var(--color-primary); */
+}
+.container-contact__title{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+    color: var(--title-color);
+    padding-bottom: 20px;
+}
+
+.container-contact__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--title-color);
+    margin-bottom: 4px;
+}
+
+.input{
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: 1.4rem;
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+.textarea{
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 6px;
+    margin-bottom: 22px;
+    background-color: #F7F7F7;
+}
+
+.login-button{
+    width: 100%;
+    border: none;
+    margin-bottom: 15px;
+}
