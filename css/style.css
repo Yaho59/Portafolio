@@ -288,6 +288,8 @@ main {
 /* Aca estan los estilos de about-me */
 .content-about-me{
     width: 90%;
+    min-width: 288px;
+    max-width: 900px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -302,7 +304,50 @@ main {
 }
 
 .content-about-me p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.5rem;
+    text-align: justify;
     color: var(--text-color);
+}
+
+.container-skills{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.container-skills__title{
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+    color: var(--title-color);
+    padding-bottom: 20px;
+}
+
+.container-skills__slider{
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.container-skills__card{
+    width: 70%;
+    max-width: 120px;
+    height: 120px;
+    margin: 50px auto 0;
+    padding: 10px;
+    background-color: #4C5059;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.container-skills__subtitle{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: var(--title-color);
 }
