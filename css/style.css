@@ -1,8 +1,8 @@
 :root{
     --title-color:#F2F2F2;
     --text-color: #80848C;
-    --color-primary: #1A1E26;
-    --color-secondary: #090A0D;
+    --color-primary: #212531;
+    --color-secondary: #0e1016;
 }
 
 *{
@@ -330,7 +330,7 @@ main {
 
 .container-skills__slider{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     height: 200px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
@@ -339,7 +339,9 @@ main {
 
 .container-skills__card{
     width: 70%;
+    scroll-snap-align: center;
     max-width: 120px;
+    min-width: 110px;
     height: 120px;
     margin: 20px auto 0;
     padding: 10px;
@@ -407,4 +409,33 @@ main {
     width: 100%;
     border: none;
     margin-bottom: 15px;
+}
+/* Aca vienen los estilos del footer */
+footer{
+    display: flex;
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 80px;
+}
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.left li {
+    margin: 10px 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--title-color);
 }
