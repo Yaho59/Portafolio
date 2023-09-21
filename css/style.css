@@ -21,16 +21,18 @@ header{
     height: 60px;
     background-color: var(--color-primary);
 }
+nav{
+    height: 100%;
+}
 
 .nav__container{
     width: 90%;
+    height: 100%;
     margin: 0 auto;
-    padding: 25px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-items: center;
-    gap: 20px;
 }
 
 .header-logo{
@@ -43,7 +45,7 @@ header{
 
 .dropdown{
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .dropdown__list{
@@ -54,6 +56,10 @@ header{
     text-decoration: none;
     color: var(--title-color);
     font-size: 1.4rem;
+    font-weight: 600;
+}
+.dropdown__link:hover{
+    color: var(--text-color);
 }
 .nav__menu{
     display: none;
@@ -148,7 +154,6 @@ main {
     position: relative;
     height: auto;
     width: 100%;
-    margin: 0 auto;
 }
 
 .image-container{
@@ -185,6 +190,7 @@ main {
     border-radius: 100px;
     border: 2px solid var(--title-color);
     object-fit: cover;
+    padding: 3px;
 }
 
 .container-information h1{
@@ -199,7 +205,6 @@ main {
 
 .button{
     display: inline-block;
-    place-items: center;
     width: 100px;
     height: 30px;
     text-align: center;
@@ -212,11 +217,16 @@ main {
     margin-top: 10px;
 }
 
+.button:hover{
+    color: var(--title-color);
+    background-color: var(--color-secondary); 
+}
+
 /* Aca estan los estilos de proyect */
 .pageweb-proyects{
     width: 100%;
     height: auto;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .pageweb-proyects__title{
@@ -228,10 +238,17 @@ main {
     padding-bottom: 20px;
 }
 
+.container-proyects{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 40px;
+}
+
 .content-proyects{
     width: 90%;
     min-width: 288px;
-    max-width: 288px;
+    max-width: 310px;
     min-height: 150px;
     margin: 15px auto;
     padding: 15px;
@@ -284,6 +301,7 @@ main {
 }
 
 .btn{
+    max-width: 100px;
     font-size: 1.2rem;
 }
 /* Aca estan los estilos de about-me */
@@ -292,7 +310,7 @@ main {
     min-width: 288px;
     max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .content-about-me h2{
@@ -306,8 +324,7 @@ main {
 
 .content-about-me p{
     font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-align: justify;
+    line-height: 1.7rem;
     color: var(--text-color);
 }
 
@@ -338,7 +355,6 @@ main {
 }
 
 .container-skills__card{
-    width: 70%;
     scroll-snap-align: center;
     max-width: 120px;
     min-width: 110px;
@@ -389,6 +405,7 @@ main {
 .input{
     background-color: #F7F7F7;
     border: none;
+    outline: none;
     border-radius: 8px;
     height: 30px;
     font-size: 1.4rem;
@@ -399,6 +416,7 @@ main {
 .textarea{
     border: none;
     border-radius: 8px;
+    outline: none;
     font-size: 1.4rem;
     padding: 6px;
     margin-bottom: 22px;
@@ -438,4 +456,81 @@ footer .left ul{
 .left a {
     text-decoration: none;
     color: var(--title-color);
+}
+
+@media (min-width: 768px) {
+    .hero-information-container{
+        flex-direction: row;
+        justify-content: left;
+        transform: translateY(-50px);
+        top: 50%;
+        right: 200px;
+        padding: 0 63px;
+        gap: 20px;
+    }
+
+    .image-information-container{
+        min-width: 180px;
+        height: 180px;
+    }
+
+    .container-information h1{
+        font-size: 3.4rem;
+        line-height: 3.7rem;
+    }
+    
+    .container-information p{
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+    }
+    
+    .button{
+        width: 150px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+
+    /* Aca los estilos de project */
+
+    .pageweb-proyects__title{
+        font-size: 2.8rem;
+        line-height: 3.1rem;
+        padding-bottom: 20px;
+    }
+
+    .container-proyects{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Aca estilos de about me */
+    .content-about-me{
+        display: flex;
+        place-items: center;
+        gap: 25px;
+    }
+    
+    .content-about-me h2{
+        font-size: 2.8rem;
+        line-height: 3.1rem;
+        padding-bottom: 20px;
+    }
+    
+    .content-about-me p{
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+    }
+
+    /* Aca estilos de skills */
+    .container-skills__title{
+        font-size: 2.4rem;
+        line-height: 2.7rem;
+        padding-bottom: 40px;
+    }
+
+    .container-skills__slider{
+        overflow: hidden;
+        overscroll-behavior-x: none;
+    }
+    
 }
