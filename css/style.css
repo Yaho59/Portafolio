@@ -153,7 +153,9 @@ nav{
 /* Aca estan los estilos del hero */
 main {
     width: 100%;
+    margin: 0 auto;
     height: auto;
+    padding: 10px;
     background-color: var(--color-secondary);
 }
 
@@ -249,6 +251,8 @@ main {
 }
 
 .container-proyects{
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -319,9 +323,9 @@ main {
 }
 /* Aca estan los estilos de about-me */
 .content-about-me{
-    width: 90%;
+    width: 100%;
     min-width: 288px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -345,7 +349,8 @@ main {
 
 .container-skills{
     width: 100%;
-    min-width: 320px;
+    max-width: 1200px;
+    margin: auto;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -573,5 +578,11 @@ footer .left ul{
     /*  Aca los estilos footer */
     .left a:hover{
         color: var(--text-color);
+    }
+}
+@media (min-width: 1600px) {
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
     }
 }
