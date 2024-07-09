@@ -1,31 +1,32 @@
-:root{
-    --title-color:#F2F2F2;
+:root {
+    --title-color: #F2F2F2;
     --text-color: #80848C;
     --color-primary: #212531;
     --color-secondary: #0e1016;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
 }
 
-header{
+header {
     width: 100%;
     height: 60px;
     background-color: var(--color-primary);
 }
-nav{
+
+nav {
     height: 100%;
 }
 
-.nav__container{
+.nav__container {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -35,57 +36,63 @@ nav{
     justify-items: center;
 }
 
-.header-logo{
+.header-logo {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    font-size: 1.8rem;  
+    font-size: 1.8rem;
     color: var(--title-color);
     text-shadow: 1px 1px 20px #4C5059;
 }
 
-.dropdown{
+.dropdown {
     display: flex;
     gap: 30px;
 }
 
-.dropdown__list{
+.dropdown__list {
     display: flex;
     list-style: none;
 }
 
-.dropdown__link{
+.dropdown__link {
     text-decoration: none;
-    color: var(--title-color);
+    color: #D9D9D9;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 300;
 }
-.dropdown__link:hover{
-    color: var(--text-color);
+
+.dropdown__link:hover {
+    color: var(--title-color);
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
 }
-.icons-menu{
+
+.icons-menu {
     display: none;
 }
-.nav__menu{
+
+.nav__menu {
     display: none;
 }
 
 @media (max-width: 1023px) {
-    .nav__menu{
+    .nav__menu {
         display: block;
     }
-    .nav{
+
+    .nav {
         --img1: scale(1);
         --img2: scale(0);
     }
-    
-    .nav:has( .dropdown:target ){
+
+    .nav:has(.dropdown:target) {
         --img1: scale(0);
         --img2: scale(1);
-    
-        --clip:inset(0 0 0 0);
+
+        --clip: inset(0 0 0 0);
     }
-    
-    .nav__container{
+
+    .nav__container {
         display: grid;
         grid-template-columns: max-content max-content;
         justify-content: space-between;
@@ -94,29 +101,29 @@ nav{
         grid-template-areas: "title img";
     }
 
-    .nav__title{
+    .nav__title {
         color: #fff;
         grid-area: title;
-    } 
-    
-    .nav__menu{
+    }
+
+    .nav__menu {
         grid-area: img;
         position: relative;
         z-index: 10;
-    
+
         transform: var(--img1);
     }
-    
-    .nav__menu--second{
+
+    .nav__menu--second {
         transform: var(--img2);
     }
 
-    .nav__icon{
+    .nav__icon {
         width: 30px;
         display: block;
     }
 
-    .dropdown{
+    .dropdown {
         position: absolute;
         background-color: var(--color-primary);
         width: 75%;
@@ -127,14 +134,14 @@ nav{
         padding: 1em;
         z-index: 2;
         display: grid;
-        align-content:center ;
+        align-content: center;
         gap: 1rem;
         overflow-y: auto;
         clip-path: var(--clip, inset(0 0 100% 100%));
         transition: clip-path .5s;
-    } 
-    
-    .dropdown__link{
+    }
+
+    .dropdown__link {
         color: rgb(184, 187, 191);
         padding: 1em .7em;
         text-decoration: none;
@@ -144,7 +151,8 @@ nav{
         position: relative;
         border-radius: 6px;
     }
-    .icons-menu{
+
+    .icons-menu {
         display: block;
     }
 }
@@ -159,23 +167,23 @@ main {
     background-color: var(--color-secondary);
 }
 
-.hero{
+.hero {
     position: relative;
     width: 100%;
     background-color: #030712;
     height: 400px;
 }
 
-.image-container{
+.image-container {
     width: 100%;
-} 
+}
 
-.image-container img{
+.image-container img {
     display: inline-block;
     width: 100%;
 }
 
-.hero-information-container{
+.hero-information-container {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -189,12 +197,12 @@ main {
     color: var(--title-color);
 }
 
-.image-information-container{
+.image-information-container {
     width: 100px;
     height: 100px;
 }
 
-.image-information-container img{
+.image-information-container img {
     width: 100%;
     height: 100%;
     border-radius: 100px;
@@ -203,19 +211,19 @@ main {
     padding: 3px;
 }
 
-.container-information h1{
+.container-information h1 {
     font-size: 2.0rem;
     line-height: 2.2rem;
     font-weight: 700
 }
 
-.container-information p{
+.container-information p {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--text-color);
 }
 
-.button{
+.button {
     display: inline-block;
     width: 100px;
     height: 30px;
@@ -229,19 +237,19 @@ main {
     margin-top: 10px;
 }
 
-.button:hover{
+.button:hover {
     color: var(--title-color);
-    background-color: #374151; 
+    background-color: #374151;
 }
 
 /* Aca estan los estilos de proyect */
-.pageweb-proyects{
+.pageweb-proyects {
     width: 100%;
     height: auto;
     padding: 50px 0;
 }
 
-.pageweb-proyects__title{
+.pageweb-proyects__title {
     text-align: center;
     font-size: 1.8rem;
     line-height: 2.0rem;
@@ -250,7 +258,7 @@ main {
     padding-bottom: 20px;
 }
 
-.container-proyects{
+.container-proyects {
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -259,7 +267,7 @@ main {
     padding-bottom: 40px;
 }
 
-.content-proyects{
+.content-proyects {
     width: 90%;
     min-width: 288px;
     max-width: 310px;
@@ -270,59 +278,61 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
     border-radius: 8px;
 }
-.content-proyects__img{
+
+.content-proyects__img {
     width: 100%;
     height: 200px;
 }
 
-.content-proyects__img img{
+.content-proyects__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.content-proyects__information{
+.content-proyects__information {
     display: flex;
     flex-direction: column;
     place-items: center;
     margin: 10px 0;
 }
 
-.content-information__title{
+.content-information__title {
     color: var(--title-color);
     font-size: 1.8rem;
     line-height: 1.9rem;
     padding-bottom: 5px;
 }
 
-.content-information__description{
+.content-information__description {
     color: var(--text-color);
     font-size: 1.5rem;
     line-height: 1.8rem;
     text-align: center;
 }
 
-.tecnologia-use{
+.tecnologia-use {
     font-size: 1.6rem;
     line-height: 1.7rem;
     color: var(--title-color);
     padding-top: 5px;
 }
 
-.button-proyects{
+.button-proyects {
     display: flex;
     gap: 20px;
 }
 
-.btn{
+.btn {
     display: flex;
     place-items: center;
     place-content: center;
     max-width: 100px;
     font-size: 1.4rem;
 }
+
 /* Aca estan los estilos de about-me */
-.content-about-me{
+.content-about-me {
     width: 100%;
     min-width: 288px;
     max-width: 1200px;
@@ -330,7 +340,7 @@ main {
     padding: 20px;
 }
 
-.content-about-me h2{
+.content-about-me h2 {
     text-align: center;
     font-size: 1.8rem;
     line-height: 2.0rem;
@@ -339,7 +349,7 @@ main {
     padding-bottom: 20px;
 }
 
-.content-about-me p{
+.content-about-me p {
     font-size: 1.6rem;
     line-height: 2.0rem;
     color: var(--text-color);
@@ -347,7 +357,7 @@ main {
 
 /* Aca empieza la seccion de skills */
 
-.container-skills{
+.container-skills {
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -355,7 +365,7 @@ main {
     text-align: center;
 }
 
-.container-skills__title{
+.container-skills__title {
     font-size: 1.8rem;
     line-height: 2.0rem;
     font-weight: bold;
@@ -363,7 +373,7 @@ main {
     padding-bottom: 20px;
 }
 
-.container-skills__slider{
+.container-skills__slider {
     display: flex;
     gap: 15px;
     height: 200px;
@@ -372,7 +382,7 @@ main {
     scroll-snap-type: x proximity;
 }
 
-.container-skills__card{
+.container-skills__card {
     scroll-snap-align: center;
     max-width: 120px;
     min-width: 110px;
@@ -384,7 +394,7 @@ main {
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
 
-.container-skills__subtitle{
+.container-skills__subtitle {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5rem;
@@ -392,12 +402,13 @@ main {
 }
 
 /* Aca vienen los estilos de la seccion de contacto */
-.container-contact{
+.container-contact {
     width: 80%;
     height: auto;
     margin: 0 auto;
 }
-.container-contact__title{
+
+.container-contact__title {
     text-align: center;
     font-size: 1.8rem;
     line-height: 2.0rem;
@@ -406,19 +417,20 @@ main {
     padding-bottom: 20px;
 }
 
-.container-contact__form{
+.container-contact__form {
     display: flex;
     flex-direction: column;
 }
 
-.label{
+.label {
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--title-color);
     margin-bottom: 4px;
 }
 
-.input, .textarea{
+.input,
+.textarea {
     background-color: #F7F7F7;
     border: none;
     outline: none;
@@ -429,27 +441,29 @@ main {
     margin-bottom: 12px;
 }
 
-.textarea{
+.textarea {
     height: 154px;
     margin-bottom: 22px;
 }
 
-.login-button{
+.login-button {
     width: 100%;
     border: none;
     margin-bottom: 15px;
 }
 
-.container-contact__image{
+.container-contact__image {
     display: none;
 }
+
 /* Aca vienen los estilos del footer */
-footer{
+footer {
     display: flex;
     width: 100%;
     background-color: var(--color-primary);
     height: 80px;
 }
+
 footer section {
     display: flex;
     width: 50%;
@@ -457,7 +471,7 @@ footer section {
     align-items: center;
 }
 
-footer .left ul{
+footer .left ul {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.8rem;
@@ -474,7 +488,7 @@ footer .left ul{
 }
 
 @media (min-width: 768px) {
-    .hero-information-container{
+    .hero-information-container {
         flex-direction: row-reverse;
         justify-content: center;
         transform: translateY(-50px);
@@ -484,22 +498,22 @@ footer .left ul{
         gap: 20px;
     }
 
-    .image-information-container{
+    .image-information-container {
         min-width: 180px;
         height: 180px;
     }
 
-    .container-information h1{
+    .container-information h1 {
         font-size: 3.4rem;
         line-height: 3.7rem;
     }
-    
-    .container-information p{
+
+    .container-information p {
         font-size: 1.6rem;
         line-height: 2.0rem;
     }
-    
-    .enlace-cv{
+
+    .enlace-cv {
         width: 150px;
         height: 40px;
         font-size: 1.4rem;
@@ -507,67 +521,68 @@ footer .left ul{
 
     /* Aca los estilos de project */
 
-    .pageweb-proyects__title{
+    .pageweb-proyects__title {
         font-size: 2.8rem;
         line-height: 3.1rem;
         padding-bottom: 20px;
     }
 
-    .container-proyects{
+    .container-proyects {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     /* Aca estilos de about me */
-    .content-about-me{
+    .content-about-me {
         display: flex;
         place-items: center;
         gap: 25px;
     }
-    
-    .content-about-me h2{
+
+    .content-about-me h2 {
         font-size: 2.8rem;
         line-height: 3.1rem;
         padding-bottom: 20px;
     }
-    
-    .content-about-me p{
+
+    .content-about-me p {
         font-size: 1.6rem;
         line-height: 2.0rem;
     }
 
     /* Aca estilos de skills */
-    .container-skills__title{
+    .container-skills__title {
         font-size: 2.4rem;
         line-height: 2.7rem;
         padding-bottom: 40px;
     }
 
-    .container-skills__slider{
+    .container-skills__slider {
         overflow: hidden;
         overscroll-behavior-x: none;
     }
 
     /* Aca los estilo de contact */
-    #contact{
+    #contact {
         padding: 10px;
     }
 
-    .container-contact{
+    .container-contact {
         display: flex;
         place-items: center;
         justify-content: space-around;
         width: 100%;
     }
 
-    .container-contact__form{
+    .container-contact__form {
         padding: 20px;
     }
 
-    .container-contact__image{
+    .container-contact__image {
         display: block;
     }
-    .container-contact__icons{
+
+    .container-contact__icons {
         display: flex;
         gap: 15px;
         place-content: center;
@@ -576,10 +591,11 @@ footer .left ul{
     }
 
     /*  Aca los estilos footer */
-    .left a:hover{
+    .left a:hover {
         color: var(--text-color);
     }
 }
+
 @media (min-width: 1600px) {
     body {
         max-width: 1440px;
